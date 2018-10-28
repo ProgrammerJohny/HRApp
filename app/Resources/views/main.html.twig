@@ -1,0 +1,60 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<div class="wrapper">
+  <div class="alert alert-dark" role="alert">
+
+  {% filter upper %}
+  Witaj w aplikacji HRApp!
+
+  {% endfilter %}
+  <hr>
+  <a href="#" onclick="window.close()">Zamknij to okno[przed wylogowaniem]</a>
+
+  </div>
+
+</div>
+
+<div class="row">
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+
+        <h5 class="card-title"><span class="fa fa-pen"></span>&nbsp;Stwórz nowego pracownika</h5>
+        <p class="card-text">Wpisz wszystkie wymagane dane, w celu stworzenia nowego konta użytkownika</p>
+        <a href="../app/add" class="btn btn-dark">Przejdź</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title"><span class="fa fa-list"></span>&nbsp;Lista wszystkich Pracowników</h5>
+        <p class="card-text">Wyświetl listę wszystkich dostępnych Pracowników.</p>
+        <a href="../app/list" class="btn btn-primary">Przejdź</a>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+<div class="row">
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title"><span class="fa fa-file-pdf"></span>&nbsp;Raporty</h5>
+        <p class="card-text">Sekcja raportowania</p>
+        <a href="../app/reports" class="btn btn-primary">Przejdź</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title"><span class="fa fa-file"></span>&nbsp;Dokumenty</h5>
+        <p class="card-text">Lista wszystkich dokumentów[skany].</p>
+        <a href="../app/docs" class="btn btn-primary">Przejdź</a>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+{% endblock %}
